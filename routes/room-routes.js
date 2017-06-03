@@ -71,7 +71,7 @@ router.get('/notes', ensure.ensureLoggedIn(),
       // if (roomsList.length > 0) {
 
       res.render('notes/rooms-list-view.ejs', {
-        layout:"layouts/layout-home",
+        layout:"layouts/home-layout",
         rooms: roomsList,
         successMessage: req.flash('success')
       });

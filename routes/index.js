@@ -15,7 +15,7 @@ router.get('/', (req, res, next) => {
   // Render a completely different view for logged in users
   // if (req.user) {
   //   res.render('logged-in-home.ejs', {
-  //     layout: "layouts/layout-home.ejs",
+  //     layout: "layouts/home-layout.ejs",
   //   });
   // } else {
   //   res.render('index');

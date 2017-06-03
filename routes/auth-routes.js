@@ -137,7 +137,7 @@ authRoutes.post('/login',
     //                   local as in "LocalStrategy" (our method of logging in)
     //                     |
   passport.authenticate('local', {
-    successRedirect: '/',
+    successRedirect: '/notes',
     successFlash: true,        // req.flash('success')
     failureRedirect: '/login',
     failureFlash: true         // req.flash('error')
@@ -162,7 +162,7 @@ authRoutes.get('/auth/facebook', passport.authenticate('facebook'));
 //where Facebook goes back after the user has accepted/rejected
 //callbackURL: 'auth/facebook/callback'
 authRoutes.get('/auth/facebook/callback', passport.authenticate('facebook', {
-  successRedirect: '/',
+  successRedirect: '/notes',
   failureRedirect: '/login'
 }));
 
@@ -172,7 +172,7 @@ authRoutes.get('/auth/google', passport.authenticate('google', {
 }));
 
 authRoutes.get('/auth/google/callback', passport.authenticate('google', {
-  successRedirect: '/',
+  successRedirect: '/notes',
   failureRedirect: '/login'
 }));
 
