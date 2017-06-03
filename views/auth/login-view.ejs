@@ -1,0 +1,41 @@
+<!-- <h2> Log In </h2> -->
+
+<!-- <h3 class="title">Register</h3> -->
+<% if (errorMessage.length > 0) { %>
+  <div class="error"> <%= errorMessage %> </div>
+<% } %>
+
+<form class="register-form" method="post" action="/login">
+  <label for="username-input"> Account Name </label>
+  <input  id="username-input" type="text" class="form-control" name="loginUsername">
+  <br>  <!--                                          |        -->
+        <!--                    usernameField: 'loginUsername' -->
+
+  <label for="password-input"> Password </label>
+  <input  id="password-input" type="password" class="form-control" name="loginPassword">
+  <br>  <!--                                              |        -->
+        <!--                        passwordField: 'loginPassword' -->
+
+  <button class="btn btn-danger btn-block"> Log In </button>
+</form>
+
+<div class="forgot">
+    <a href="#" class="btn btn-simple btn-primary">Forgot password?</a>
+</div>
+
+<h5>-OR-</h5>
+
+<a class="btn btn-danger btn-block" href='/auth/facebook'>
+  Log In with Facebook
+</a>
+<br>
+
+<a class="btn btn-danger btn-block" href='/auth/google'>
+  Log In with Google
+</a>
+<br>
+
+<p><b>
+   Don't have an account?
+  <a class="btn btn-danger btn-fill" href="/signup">Sign Up</a>
+</b></p>
