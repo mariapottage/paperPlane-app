@@ -87,16 +87,18 @@
     <div class="alert alert-danger landing-alert">
          <div class="container text-center">
 					 <!-- req.flash() returns an array (wat) -->
+					 <% if (typeof successMessage !== 'undefined') { %>
+
 					 <% if (successMessage.length > 0) { %>
 					   <div class="success"> <%= successMessage %> </div>
 					 <% } %>
-
-					 <% if (typeof user !== 'undefined') { %>
-					   <p> Hello, <%= user.name %>! </p>
 					 <% } %>
 
-					 <p>Welcome to <%= title %></p>
-             <!-- <h5>Get a 10% discount on selected products until the 5th of November!</h5> -->
+					 <% if (typeof user !== 'undefined') { %>
+					   <h3> Hello, <%= user.name %>! </h3>
+			 <% } %>
+
+					 <h4>Welcome to <%= title %></h4>
         </div>
     </div>
 

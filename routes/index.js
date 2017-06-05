@@ -13,19 +13,22 @@ router.get('/', (req, res, next) => {
   console.log(req.user);
 
   // Render a completely different view for logged in users
-  // if (req.user) {
-  //   res.render('logged-in-home.ejs', {
-  //     layout: "layouts/home-layout.ejs",
-  //   });
-  // } else {
-  //   res.render('index');
-  // }
+  if (req.user) {
+    res.render('logged-in-home', {
+        // successMessage: req.flash('success'),
+      layout: "layouts/layout-home",
+    });
+  } else {
+    res.render('index',{
+    successMessage: req.flash('success'),
+});
+  }
 
-  res.render('index', {
-    // user: req.user,
-    successMessage: req.flash('success')
-      //                          |
-  }); //        default success message key from Passport
+  // res.render('index', {
+  //   // user: req.user,
+  //   successMessage: req.flash('success')
+  //     //                          |
+  // }); //        default success message key from Passport
 });
 
 module.exports = router;

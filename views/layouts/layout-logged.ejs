@@ -23,8 +23,8 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-ct-transparent" role="navigation-demo" id="register-navbar">
-			<!-- <nav class="navbar navbar-ct-transparent" role="navigation-demo" id="demo-navbar"> -->
+
+	<nav class="navbar navbar-ct-transparent navbar-fixed-top" role="navigation-demo" id="register-navbar">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -39,9 +39,9 @@
 							 <div class="logo">
 									 <img src="#" alt="PaperPlane Logo">
 							 </div>
-							 <div class="brand">
+							 <!-- <div class="brand">
 									 PaperPlane
-							 </div>
+							 </div> -->
 					 </div>
       		</a>
         </div>
@@ -58,7 +58,7 @@
               <a href="/profile/edit" class="btn btn-neutral btn-simple">Edit Profile</a>
             </li>
             <li>
-              <a href="/logout" class=class="btn btn-danger btn-fill">Log Out</a>
+              <a href="/logout" class="btn btn-danger btn-fill">Log Out</a>
             </li>
 
         <% } else { %>
@@ -80,27 +80,25 @@
            </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-->
+	</nav>
 
-    <!-- </nav>
-    <div class="alert alert-danger landing-alert">
-         <div class="container text-center">
-					 <h5>Get a 10% discount on selected products until the 5th of November!</h5>÷
-        </div>
-    </div> -->
 
     <div class="wrapper">
-        <div class="demo-header" style="background-image: url('../images/jan-kahanek-184676.jpg');">
+        <div class="register-background" style="background-image: url('../images/jan-kahanek-184676.jpg')">
             <div class="container">
-								  <%- body %>
+							<div class="row">
+                        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 ">
+													<!-- <div class="register-card"> -->
+
+										  <%- body %>
+          	 					 		</div>
+											 	<!-- </div> -->
+							</div>
+						</div>
 
 
-            </div>
-        </div>
-
-
-    <footer class="footer-demo section-dark">
-        <div class="container">
-            <nav class="pull-left">
+    		<div class="footer register-footer text-center">
+            <!-- <nav class="pull-left">
                 <ul>
 
                     <li>
@@ -119,11 +117,12 @@
                         </a>
                     </li>
                 </ul>
-            </nav>
-            <div class="copyright pull-right">
+            </nav> -->
+
                 &copy; 2017, made with <i class="fa fa-heart heart"></i> by Maria Pottage at Ironhack
-        </div>
-    </footer>
+
+    	</div>
+</div>
 
 </body>
 

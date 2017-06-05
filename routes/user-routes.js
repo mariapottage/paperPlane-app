@@ -25,7 +25,7 @@ routerThingy.get('/profile/edit',
     // }
 
     res.render('user/edit-profile-view.ejs', {
-      layout:"layouts/home-layout",
+      layout:"layouts/layout-home",
       successMessage: req.flash('success')
     });
   }
@@ -54,7 +54,7 @@ routerThingy.post('/profile/edit',
         // if there's a user with the username and it's not you
         if (foundUser && !foundUser._id.equals(req.user._id)) {
           res.render('user/edit-profile-view.ejs', {
-            layout:"layouts/home-layout",
+            layout:"layouts/layout-home",
             errorMessage: 'Username already taken. 😤'
           });
           return;
